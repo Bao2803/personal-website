@@ -163,7 +163,7 @@ export const portfolioItems: PortfolioItem[] = [
     description: [
       "Created AI bots to track and shoot players using Unreal Engine's AI Behavioral tree and Blackboard, intensifying gameplay challenges",
       "Established real-time multiplayer mode via Unreal Engine online subsystem and Steam, ensuring smooth gaming across locations",
-      "Implemented interpolation and extrapolation techniques to reduce network latency by 30\% during gameplay, enhancing user experience",
+      "Implemented interpolation and extrapolation techniques to reduce network latency by 30% during gameplay, enhancing user experience",
     ],
     url: 'https://youtu.be/8stFrYXEMpg',
   },
@@ -188,8 +188,8 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'NASA Project',
     description: [
       "Built a full stack application using CRUD and REST APIs",
-      "Deployed the project to AWS with Docker, resulting in a 50\% reduction in deployment time",
-      "Developed and implemented a streamlined CI pipeline on GitHub, resulting in a 50\% reduction in build and deployment time",
+      "Deployed the project to AWS with Docker, resulting in a 50% reduction in deployment time",
+      "Developed and implemented a streamlined CI pipeline on GitHub, resulting in a 50% reduction in build and deployment time",
     ],
     url: 'https://github.com/Bao2803/Nasa-Project/tree/main',
   },
@@ -233,7 +233,7 @@ export const experience: TimelineItem[] = [
     location: 'JRL Lab - Purdue University',
     title: 'Undergraduate Research Fellow',
     content: (
-      <ul style={{ listStyleType: 'disc', marginLeft: '20px' }}>
+      <ul style={{listStyleType: 'disc', marginLeft: '20px'}}>
         <li>
           Developed a configurable 
           <a href="https://drive.google.com/file/d/1bH0HHR7qphevl-pTsw5id3fTvsWrrh13/view?usp=sharing" 
@@ -251,7 +251,7 @@ export const experience: TimelineItem[] = [
     location: 'OplaCRM',
     title: 'Full Stack Developer Intern',
     content: (
-      <ul style={{ listStyleType: 'disc', marginLeft: '20px' }}>
+      <ul style={{listStyleType: 'disc', marginLeft: '20px'}}>
         <li>
           Developed a full stack e-commerce platform used by more than 20 corporates and 40 partners with Golang and 
           GORM on the PostgreSQL database
@@ -267,7 +267,7 @@ export const experience: TimelineItem[] = [
     location: 'Omnilos',
     title: 'Software Developer Intern',
     content: (
-      <ul style={{ listStyleType: 'disc', marginLeft: '20px' }}>
+      <ul style={{listStyleType: 'disc', marginLeft: '20px'}}>
         <li>
           Developed a MERN-stack web application for the real-time stock price and segmentation analysis of customer 
           portfolio

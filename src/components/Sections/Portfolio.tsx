@@ -43,7 +43,7 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
           <h2 className="font-bold text-white opacity-100">{title}</h2>
           <ul 
             className="text-xs text-white opacity-100 sm:text-sm" 
-            style={{ listStyleType: 'disc', marginLeft: '20px' }}
+            style={{listStyleType: 'disc', marginLeft: '20px'}}
           >
             {description.map((bullet) => <li>{bullet}</li>)}
           </ul>
