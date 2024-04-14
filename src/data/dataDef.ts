@@ -61,16 +61,9 @@ export interface Stat {
 /**
  * Skills section
  */
-
-export interface Skill {
-  name: string;
-  level: number;
-  max?: number;
-}
-
 export interface SkillGroup {
   name: string;
-  skills: Skill[];
+  skills: string[];
 }
 
 /**
@@ -78,9 +71,8 @@ export interface SkillGroup {
  */
 export interface PortfolioItem {
   title: string;
-  description: string;
-  url: string;
-  image: string | StaticImageData;
+  description: string[];
+  url?: string;
 }
 
 /**
@@ -112,7 +104,7 @@ export interface Testimonial {
  */
 export interface ContactSection {
   headerText?: string;
-  description: string;
+  description?: string;
   items: ContactItem[];
 }
 

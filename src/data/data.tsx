@@ -1,18 +1,18 @@
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
-  BuildingOffice2Icon,
-  CalendarIcon,
-  FlagIcon,
-  MapIcon,
+  // BuildingOffice2Icon,
+  // CalendarIcon,
+  // FlagIcon,
+  // MapIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
+// import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
+// import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
+// import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
@@ -25,7 +25,7 @@ import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
+// import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -44,8 +44,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'React Resume',
+  description: "Example site built with Bao Phan's react resume template",
 };
 
 /**
@@ -69,18 +69,16 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Bao Phan.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a junior in Computer Science at Purdue University.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        I has experience developing software using technologies 
+        like Unreal Engine 5, React, AWS, and Azure through internships and personal projects spanning 
+        areas like web applications, game development, and simulations.
       </p>
     </>
   ),
@@ -103,17 +101,12 @@ export const heroData: Hero = {
  * About section
  */
 export const aboutData: About = {
-  profileImageSrc: profilepic,
   description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
   to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
   in.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Interests', text: 'Coding, Gaming, Piano, Fishing', Icon: SparklesIcon},
+    {label: 'Study', text: 'Purdue University', Icon: AcademicCapIcon},
   ],
 };
 
@@ -122,71 +115,43 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: 'Languages',
     skills: [
-      {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
+        'Java',
+        'Golang',
+        'C/C++',
+        'JavaScript/Typescript',
+        'C#',
+        'HTML/CSS',
+        'NodeJS',
+        'Matlab',
+        'Python',
+        'Bash',
+        'Swift',
+        'SQL',
     ],
   },
   {
-    name: 'Frontend development',
+    name: 'Frameworks and Library',
     skills: [
-      {
-        name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
-      },
+      'Ant Design',
+      'Material UI',
+      'ReactJS',
+      'Jest',
+      'supertest',
+      'OpenGL',
     ],
   },
   {
-    name: 'Backend development',
+    name: 'Techonologies',
     skills: [
-      {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
-      },
+      'AWS',
+      'Azure',
+      'Docker',
+      'Docker',
+      'Git',
+      'Unity',
+      'Unreal Engine',
     ],
   },
 ];
@@ -196,70 +161,55 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage1,
+    title: 'Shell Project',
+    description: [
+      "Developed a Unix-like shell interpreter in C++ with command parsing, execution, I/O redirection, piping, and background process handling",
+      "Integrated features like environment variable expansion, quote handling, escaping, and built-in commands like printenv and setenv",
+      "Implemented control flow constructs such as if statements, while loops, and for loops, enabling scripting capabilities within the shell",
+    ],
+    // url: 'https://reactresume.com',
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage2,
+    title: 'Multiplayer Shooter',
+    description: [
+      "Created AI bots to track and shoot players using Unreal Engine's AI Behavioral tree and Blackboard, intensifying gameplay challenges",
+      "Established real-time multiplayer mode via Unreal Engine online subsystem and Steam, ensuring smooth gaming across locations",
+      "Implemented interpolation and extrapolation techniques to reduce network latency by 30\% during gameplay, enhancing user experience",
+    ],
+    url: 'https://youtu.be/8stFrYXEMpg',
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage3,
+    title: 'Photo Gallery',
+    description: [
+      "Led the development of a monolithic web app in Golang, implementing MVC architecture for a feature-rich platform akin to Google Photos",
+      "Implemented secure user authentication system from scratch in Golang, utilizing salt and pepper encryption methods and protecting against CSRF attacks with gorilla/csrf",
+      "Managed the creation of robust gallery management features, enabling users to effortlessly create, edit, and share galleries",
+    ],
+    url: 'https://github.com/Bao2803/photo_gallery',
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
+    title: 'Storage Planner',
+    description: [
+      "Developed a full-stack application handling over 3000 requests daily for 200 users using AWS Lambda with Java and PostgreSQL on AWS RDS",
+      "Implemented highly scalable architecture using AWS SQS and notification service using AWS SNS",
+      "Created a single-page application using ReactJS with TypeScript",
+    ],
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
+    title: 'NASA Project',
+    description: [
+      "Built a full stack application using CRUD and REST APIs",
+      "Deployed the project to AWS with Docker, resulting in a 50\% reduction in deployment time",
+      "Developed and implemented a streamlined CI pipeline on GitHub, resulting in a 50\% reduction in build and deployment time",
+    ],
+    url: 'https://github.com/Bao2803/Nasa-Project/tree/main',
   },
   {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
+    title: 'Campus Mobility Enhanced',
+    description: [
+      "Conducted thorough data analysis on user preferences and usage patterns, leading to the identification of key areas of improvement for the Purdue Campus Mobility system",
+      "Built and programmed a simulated traffic light using Arduino and C++, effectively controlling the prototype lever arm in real-time testing",
+    ],
   },
 ];
 
@@ -268,40 +218,75 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'Expected May 2025',
+    location: 'Purdue University',
+    title: 'BS in Computer Science',
+    content: (
+      <ul>
+        <li>
+          <strong>Award & Honors: </strong>Semester Honors, Dean's List
+        </li>
+        <li>
+          <strong>Extracurricular Activity: </strong>Engineering in the World of Data Learning Community, IEEE Computer Society
+        </li>
+        <li>
+          <strong>Relevant Courses: </strong>Object Oriented Programming, C Programming, Data Structure and Algorithm, Software 
+          Engineering Tools, Computer Graphics, System Programming
+        </li>
+      </ul>
+    ),
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'May 2023 - August 2023',
+    location: 'JRL Lab - Purdue University',
+    title: 'Undergraduate Research Fellow',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <ul style={{ listStyleType: 'disc', marginLeft: '20px' }}>
+        <li>
+          Developed a configurable 
+          <a href="https://drive.google.com/file/d/1bH0HHR7qphevl-pTsw5id3fTvsWrrh13/view?usp=sharing" 
+          style={{color: 'blue'}}> level III driving</a> using Unreal Engine and C++ as a testbed for a cutting-edge 
+          NSF-granted automated driving researchsimulation
+        </li>
+        <li>
+          Created a low latency data streaming pipeline for analysis by utilizing UDP and Kafka
+        </li>
+      </ul>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'January 2023 - April 2023',
+    location: 'OplaCRM',
+    title: 'Full Stack Developer Intern',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <ul style={{ listStyleType: 'disc', marginLeft: '20px' }}>
+        <li>
+          Developed a full stack e-commerce platform used by more than 20 corporates and 40 partners with Golang and 
+          GORM on the PostgreSQL database
+        </li>
+        <li>
+          Reduced software bugs by 20% by implementing comprehensive unit tests using supertest and Jest framework
+        </li>
+      </ul>
+    ),
+  },
+  {
+    date: 'September 2022 - December 2022',
+    location: 'Omnilos',
+    title: 'Software Developer Intern',
+    content: (
+      <ul style={{ listStyleType: 'disc', marginLeft: '20px' }}>
+        <li>
+          Developed a MERN-stack web application for the real-time stock price and segmentation analysis of customer 
+          portfolio
+        </li>
+        <li>
+          Improved application performance and user experience by reducing 30\% application loading time using CDN
+        </li>
+      </ul>
     ),
   },
 ];
@@ -311,52 +296,24 @@ export const experience: TimelineItem[] = [
  */
 export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
-  testimonials: [
-    {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
-    },
-  ],
+  testimonials: [],
 };
 
 /**
  * Contact section
  */
-
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
-    },
-    {
-      type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: 'bao.q.phan.work@gmail.com',
+      href: 'mailto:bao.q.phan.work@gmail.com',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'bao2803',
+      href: 'https://github.com/bao2803',
     },
   ],
 };
@@ -365,9 +322,6 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/bao2803/'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/bao2803/'},
 ];
