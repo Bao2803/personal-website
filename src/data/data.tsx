@@ -1,20 +1,12 @@
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
-  // BuildingOffice2Icon,
-  // CalendarIcon,
-  // FlagIcon,
-  // MapIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-// import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-// import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-// import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
-// import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -73,9 +65,10 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: '/resume.pdf',
       text: 'Resume',
       primary: true,
+      download: 'resume.pdf',
       Icon: ArrowDownTrayIcon,
     },
     {
@@ -90,9 +83,8 @@ export const heroData: Hero = {
  * About section
  */
 export const aboutData: About = {
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `Beside coding, I also love to gaming in my freetime. My favorite games are all from Riot Game: League of
+  Legends, Valorant, and TFT. I also love to play piano and fishing, however, I am not a professional :)`,
   aboutItems: [
     {label: 'Interests', text: 'Coding, Gaming, Piano, Fishing', Icon: SparklesIcon},
     {label: 'Study', text: 'Purdue University', Icon: AcademicCapIcon},

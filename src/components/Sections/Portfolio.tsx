@@ -45,7 +45,7 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
             className="text-xs text-white opacity-100 sm:text-sm" 
             style={{listStyleType: 'disc', marginLeft: '20px'}}
           >
-            {description.map((bullet) => <li>{bullet}</li>)}
+            {description.map((bullet, index) => <li key={index} >{bullet}</li>)}
           </ul>
         </div>
         {url && <ArrowTopRightOnSquareIcon className="absolute bottom-1 right-1 h-4 w-4 shrink-0 text-white sm:bottom-2 sm:right-2" />}
