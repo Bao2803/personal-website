@@ -9,7 +9,7 @@ export const SkillGroup: FC<PropsWithChildren<{skillGroup: SkillGroupType}>> = m
   return (
     <div>
       <span className="text-center text-lg font-bold">{`${name}: `}</span>
-      <span className='text-center text-lg font-medium'>{skillString}</span>
+      <span className='text-center text-md font-sm'>{skillString}</span>
     </div>
   );
 });

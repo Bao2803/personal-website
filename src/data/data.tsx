@@ -54,11 +54,11 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a junior in Computer Science at Purdue University.
+        I'm a senior in Computer Science at Purdue University.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         I has experience developing software using technologies 
-        like Unreal Engine 5, React, AWS, and Azure through internships and personal projects spanning 
+        like Spring Boot, React, GCP, AWS, Azure, and Unreal Engine 5 through internships and personal projects spanning 
         areas like web applications, game development, and simulations.
       </p>
     </>
@@ -83,8 +83,8 @@ export const heroData: Hero = {
  * About section
  */
 export const aboutData: About = {
-  description: `Beside coding, I also love to gaming in my freetime. My favorite games are all from Riot Game: League of
-  Legends, Valorant, and TFT. I also love to play piano and fishing, however, I am not a professional :)`,
+  description: `Beside coding, I love to gaming in my freetime. My favorite games are: League of
+  Legends, Sekiro, and Black Myth Wukong. Beside gaming, I also love plaing piano and fishing :)`,
   aboutItems: [
     {label: 'Interests', text: 'Coding, Gaming, Piano, Fishing', Icon: SparklesIcon},
     {label: 'Study', text: 'Purdue University', Icon: AcademicCapIcon},
@@ -99,40 +99,45 @@ export const skills: SkillGroup[] = [
     name: 'Languages',
     skills: [
         'Java',
-        'Golang',
         'C/C++',
         'JavaScript/Typescript',
+        'SQL',
+        'Golang',
         'C#',
         'HTML/CSS',
         'NodeJS',
         'Matlab',
         'Python',
         'Bash',
-        'Swift',
-        'SQL',
-    ],
-  },
-  {
-    name: 'Frameworks and Library',
-    skills: [
-      'Ant Design',
-      'Material UI',
-      'ReactJS',
-      'Jest',
-      'supertest',
-      'OpenGL',
     ],
   },
   {
     name: 'Techonologies',
     skills: [
+      'Git',
+      'Docker',
+      'GCP',
       'AWS',
       'Azure',
-      'Docker',
-      'Docker',
-      'Git',
+      'Kafka',
+      'RabbitMQ',
+      'Redis',
+      'Elasticsearch',
+      'Debezium',
+      'MinIO',
       'Unity',
       'Unreal Engine',
+    ],
+  },
+  {
+    name: 'Frameworks and Library',
+    skills: [
+      'Spring/Spring Boot',
+      'ReactJS',
+      'Gin',
+      'Ant Design',
+      'Material UI',
+      'OpenGL',
     ],
   },
 ];
@@ -148,7 +153,6 @@ export const portfolioItems: PortfolioItem[] = [
       "Integrated features like environment variable expansion, quote handling, escaping, and built-in commands like printenv and setenv",
       "Implemented control flow constructs such as if statements, while loops, and for loops, enabling scripting capabilities within the shell",
     ],
-    // url: 'https://reactresume.com',
   },
   {
     title: 'Multiplayer Shooter',
@@ -167,23 +171,6 @@ export const portfolioItems: PortfolioItem[] = [
       "Managed the creation of robust gallery management features, enabling users to effortlessly create, edit, and share galleries",
     ],
     url: 'https://github.com/Bao2803/photo_gallery',
-  },
-  {
-    title: 'Storage Planner',
-    description: [
-      "Developed a full-stack application handling over 3000 requests daily for 200 users using AWS Lambda with Java and PostgreSQL on AWS RDS",
-      "Implemented highly scalable architecture using AWS SQS and notification service using AWS SNS",
-      "Created a single-page application using ReactJS with TypeScript",
-    ],
-  },
-  {
-    title: 'NASA Project',
-    description: [
-      "Built a full stack application using CRUD and REST APIs",
-      "Deployed the project to AWS with Docker, resulting in a 50% reduction in deployment time",
-      "Developed and implemented a streamlined CI pipeline on GitHub, resulting in a 50% reduction in build and deployment time",
-    ],
-    url: 'https://github.com/Bao2803/Nasa-Project/tree/main',
   },
   {
     title: 'Campus Mobility Enhanced',
@@ -221,7 +208,7 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: 'May 2023 - August 2023',
+    date: 'May 2023 - Aug 2023',
     location: 'JRL Lab - Purdue University',
     title: 'Undergraduate Research Fellow',
     content: (
@@ -239,7 +226,7 @@ export const experience: TimelineItem[] = [
     ),
   },
   {
-    date: 'January 2023 - April 2023',
+    date: 'Jan 2023 - Apr 2023',
     location: 'OplaCRM',
     title: 'Full Stack Developer Intern',
     content: (
@@ -250,22 +237,6 @@ export const experience: TimelineItem[] = [
         </li>
         <li>
           Reduced software bugs by 20% by implementing comprehensive unit tests using supertest and Jest framework
-        </li>
-      </ul>
-    ),
-  },
-  {
-    date: 'September 2022 - December 2022',
-    location: 'Omnilos',
-    title: 'Software Developer Intern',
-    content: (
-      <ul style={{listStyleType: 'disc', marginLeft: '20px'}}>
-        <li>
-          Developed a MERN-stack web application for the real-time stock price and segmentation analysis of customer 
-          portfolio
-        </li>
-        <li>
-          Improved application performance and user experience by reducing 30\% application loading time using CDN
         </li>
       </ul>
     ),
