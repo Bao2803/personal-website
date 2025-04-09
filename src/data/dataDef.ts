@@ -104,6 +104,7 @@ export interface Testimonial {
  * Contact section
  */
 export interface ContactSection {
+  imageSrc?: string | StaticImageData;
   headerText?: string;
   description?: string;
   items: ContactItem[];

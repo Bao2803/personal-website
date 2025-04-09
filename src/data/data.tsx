@@ -57,8 +57,8 @@ export const heroData: Hero = {
         I'm a senior in Computer Science at Purdue University.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I has experience developing software using technologies 
-        like Spring Boot, React, GCP, AWS, Azure, and Unreal Engine 5 through internships and personal projects spanning 
+        I has experience developing software using technologies
+        like Spring Boot, React, GCP, AWS, Azure, and Unreal Engine 5 through internships and personal projects spanning
         areas like web applications, game development, and simulations.
       </p>
     </>
@@ -86,8 +86,8 @@ export const aboutData: About = {
   description: `Beside coding, I love to gaming in my freetime. My favorite games are: League of
   Legends, Sekiro, and Black Myth Wukong. Beside gaming, I also love plaing piano and fishing :)`,
   aboutItems: [
-    {label: 'Interests', text: 'Coding, Gaming, Piano, Fishing', Icon: SparklesIcon},
-    {label: 'Study', text: 'Purdue University', Icon: AcademicCapIcon},
+    { label: 'Interests', text: 'Coding, Gaming, Piano, Fishing', Icon: SparklesIcon },
+    { label: 'Study', text: 'Purdue University', Icon: AcademicCapIcon },
   ],
 };
 
@@ -98,17 +98,17 @@ export const skills: SkillGroup[] = [
   {
     name: 'Languages',
     skills: [
-        'Java',
-        'C/C++',
-        'JavaScript/Typescript',
-        'SQL',
-        'Golang',
-        'C#',
-        'HTML/CSS',
-        'NodeJS',
-        'Matlab',
-        'Python',
-        'Bash',
+      'Java',
+      'C/C++',
+      'JavaScript/Typescript',
+      'SQL',
+      'Golang',
+      'C#',
+      'HTML/CSS',
+      'NodeJS',
+      'Matlab',
+      'Python',
+      'Bash',
     ],
   },
   {
@@ -146,6 +146,43 @@ export const skills: SkillGroup[] = [
  * Portfolio section
  */
 export const portfolioItems: PortfolioItem[] = [
+  {
+    title: "Cloud Alloc",
+    description: [
+      "Developed a Spring Boot API to manage multiple Google Drive and Dropbox accounts",
+      "Used PostgreSQL as a DB, and Redis as a cache for the cache-aside pattern",
+      "Implementing CDC using Debezium and Kafka to sync data near real-time from PostgreSQL and Drive to ElasticSearch, enabling full-context search over both file metadata and file contents",
+      "Implemented lazy updating using MinIO as a cache for file updates, decreasing API calls to Drive and Dropbox",
+    ],
+    url: "https://github.com/Bao2803/cloud_alloc"
+  },
+  {
+    title: "Petinder",
+    description: [
+      "Developed a microservices backend API that is similar to Tinder but for pets, and deployed on Azure",
+      "Used RabbitMQ as a message broker for services communication, decoupling the backend services",
+      "Implemented OAuth2 login with Google/GitHub using Spring Security",
+      "Implemented full context search for pets using PostgreSQL's Full-Text Search",
+    ],
+    url: "https://github.com/namneyugn21/Petinder",
+  },
+  {
+    title: "XinuOS",
+    description: [
+      "Enhanced XINU's scheduler by implementing a dynamic scheduling algorithm using multilevel feedback queues reducing complexity from O(n) to O(1)",
+      "Tracked per-process CPU usage and response times, boosting system responsiveness for 100+ processes by 20%",
+      "Developed a framework to adjust process priorities dynamically, increasing throughput by up to 40% for CPU-bound and I/O-bound processes",
+    ],
+  },
+  {
+    title: "Personal Finanace",
+    description: [
+      "Created a responsive dashboard UI to display transactions and statistics using ReactJS and Material UI",
+      "Developed a highly scalable serverless backend using Java, AWS Lambda, and AWS RDS for PostgreSQL",
+      "Utilized AWS API Gateway for load balancing and exposing the API",
+    ],
+    url: "https://github.com/Bao2803/ServerlessTransaction",
+  },
   {
     title: 'Shell Project',
     description: [
@@ -198,7 +235,7 @@ export const education: TimelineItem[] = [
           <strong>Extracurricular Activity: </strong>Engineering in the World of Data Learning Community, IEEE Computer Society
         </li>
         <li>
-          <strong>Relevant Courses: </strong>Object Oriented Programming, C Programming, Data Structure and Algorithm, Software 
+          <strong>Relevant Courses: </strong>Object Oriented Programming, C Programming, Data Structure and Algorithm, Software
           Engineering Tools, Computer Graphics, System Programming
         </li>
       </ul>
@@ -212,11 +249,11 @@ export const experience: TimelineItem[] = [
     location: 'JRL Lab - Purdue University',
     title: 'Undergraduate Research Fellow',
     content: (
-      <ul style={{listStyleType: 'disc', marginLeft: '20px'}}>
+      <ul style={{ listStyleType: 'disc', marginLeft: '20px' }}>
         <li>
-          Developed a configurable 
-          <a href="https://drive.google.com/file/d/1bH0HHR7qphevl-pTsw5id3fTvsWrrh13/view?usp=sharing" 
-          style={{color: 'blue'}}> level III driving</a> using Unreal Engine and C++ as a testbed for a cutting-edge 
+          Developed a configurable
+          <a href="https://drive.google.com/file/d/1bH0HHR7qphevl-pTsw5id3fTvsWrrh13/view?usp=sharing"
+            style={{ color: 'blue' }}> level III driving</a> using Unreal Engine and C++ as a testbed for a cutting-edge
           NSF-granted automated driving researchsimulation
         </li>
         <li>
@@ -230,9 +267,9 @@ export const experience: TimelineItem[] = [
     location: 'OplaCRM',
     title: 'Full Stack Developer Intern',
     content: (
-      <ul style={{listStyleType: 'disc', marginLeft: '20px'}}>
+      <ul style={{ listStyleType: 'disc', marginLeft: '20px' }}>
         <li>
-          Developed a full stack e-commerce platform used by more than 20 corporates and 40 partners with Golang and 
+          Developed a full stack e-commerce platform used by more than 20 corporates and 40 partners with Golang and
           GORM on the PostgreSQL database
         </li>
         <li>
@@ -255,6 +292,7 @@ export const testimonial: TestimonialSection = {
  * Contact section
  */
 export const contact: ContactSection = {
+  imageSrc: testimonialImage,
   headerText: 'Get in touch.',
   items: [
     {
@@ -264,8 +302,13 @@ export const contact: ContactSection = {
     },
     {
       type: ContactType.Github,
-      text: 'bao2803',
+      text: 'github.com/bao2803',
       href: 'https://github.com/bao2803',
+    },
+    {
+      type: ContactType.LinkedIn,
+      text: 'linkedin/in/bao2803',
+      href: 'https://www.linkedin.com/in/bao2803/',
     },
   ],
 };
@@ -274,6 +317,6 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/bao2803/'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/bao2803/'},
+  { label: 'Github', Icon: GithubIcon, href: 'https://github.com/bao2803/' },
+  { label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/bao2803/' },
 ];
