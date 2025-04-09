@@ -234,8 +234,8 @@ export const education: TimelineItem[] = [
           <strong>Extracurricular Activity: </strong>Engineering in the World of Data Learning Community, IEEE Computer Society
         </li>
         <li>
-          <strong>Relevant Courses: </strong>Object Oriented Programming, C Programming, Data Structure and Algorithm, Software
-          Engineering Tools, Computer Graphics, System Programming
+          <strong>Relevant Courses: </strong>Object Oriented Programming, Data Structure and Algorithm, 
+          Computer Network, Operating System, Software Engineering, C Programming, Computer Graphics, System Programming
         </li>
       </ul>
     ),
@@ -244,20 +244,38 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
+    date: 'May 2024 - Aug 2024',
+    location: 'FPT Software',
+    title: 'Java Backend Intern',
+    content: (
+      <ul style={{ listStyleType: 'disc', marginLeft: '20px' }}>
+        <li>
+          Led a team of <strong>9</strong> interns to build a microservices-based LMS using Java, Spring Boot, Docker, and GCP
+        </li>
+        <li>
+          Utilized Kafka to improve task processing and service scalability increasing throughput by <strong>50%</strong>
+        </li>
+        <li>
+          Implemented PostgreSQL to Elasticsearch sync with Debezium and Kafka, enabling full-context search
+        </li>
+        <li>
+          Optimized <strong>40%</strong> performance by using Redis for caching
+        </li>
+      </ul>
+    ),
+  },
+  {
     date: 'May 2023 - Aug 2023',
     location: 'JRL Lab - Purdue University',
     title: 'Undergraduate Research Fellow',
     content: (
       <ul style={{ listStyleType: 'disc', marginLeft: '20px' }}>
         <li>
-          Developed a configurable
-          <a href="https://drive.google.com/file/d/1bH0HHR7qphevl-pTsw5id3fTvsWrrh13/view?usp=sharing"
-            style={{ color: 'blue' }}> level III driving</a> using Unreal Engine and C++ as a testbed for a cutting-edge
-          NSF-granted automated driving researchsimulation
+          Developed a configurable <a href="https://drive.google.com/file/d/1bH0HHR7qphevl-pTsw5id3fTvsWrrh13/view?usp=sharing"
+            style={{ color: 'blue' }}>level III driving simulation</a> using UE 5.1 and C++ for a NSF-granted research
         </li>
-        <li>
-          Created a low latency data streaming pipeline for analysis by utilizing UDP and Kafka
-        </li>
+        <li>Developed a vehicle queuing algorithm with <strong>100%</strong> accuracy, simulating stop sign flow in the U.S.</li>
+        <li>Built a UDP pipeline for event transmission, reducing FPS drop by <strong>40%</strong> and improving performance</li>
       </ul>
     ),
   },
@@ -267,13 +285,10 @@ export const experience: TimelineItem[] = [
     title: 'Full Stack Developer Intern',
     content: (
       <ul style={{ listStyleType: 'disc', marginLeft: '20px' }}>
-        <li>
-          Developed a full stack e-commerce platform used by more than 20 corporates and 40 partners with Golang and
-          GORM on the PostgreSQL database
-        </li>
-        <li>
-          Reduced software bugs by 20% by implementing comprehensive unit tests using supertest and Jest framework
-        </li>
+        <li>Built a fullstack ecommerce for over <strong>20</strong> corporations and <strong>40</strong> partners using Gin and PostgreSQL</li>
+        <li>Implemented GraphQL API, enabling smoother frontend integration by allowing flexible data retrieval</li>
+        <li>Developed and customized multiple React components based on new layout designs created in Figma</li>
+        <li>Optimized deployment with Docker and improved caching using Redis, reducing load times by <strong>30%</strong></li>
       </ul>
     ),
   },
