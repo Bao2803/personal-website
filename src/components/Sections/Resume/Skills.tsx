@@ -8,7 +8,8 @@ export const SkillGroup: FC<PropsWithChildren<{skillGroup: SkillGroupType}>> = m
   const skillString = useMemo(() => skills.join(skillSeperator), [skills]);
   return (
     <div>
-      <span className="text-center text-lg font-bold">{`${name}: `}</span>
+      <span className="text-center text-lg font-bold">{`${name}`}</span>
+      <br/>
       <span className='text-center text-md font-sm'>{skillString}</span>
     </div>
   );

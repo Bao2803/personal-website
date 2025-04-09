@@ -100,7 +100,7 @@ export const skills: SkillGroup[] = [
     skills: [
       'Java',
       'C/C++',
-      'JavaScript/Typescript',
+      'JavaScript/TypeScript',
       'SQL',
       'Golang',
       'C#',
@@ -124,7 +124,6 @@ export const skills: SkillGroup[] = [
       'Redis',
       'Elasticsearch',
       'Debezium',
-      'MinIO',
       'Unity',
       'Unreal Engine',
     ],
