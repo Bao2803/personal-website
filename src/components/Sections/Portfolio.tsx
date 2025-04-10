@@ -1,29 +1,29 @@
-import { FC, memo, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { Fragment } from 'react';
-import GithubIcon from '../Icon/GithubIcon';
-import { portfolioItems, SectionId } from '../../data/data';
-import Section from '../Layout/Section';
-import { PortfolioItem } from '../../data/dataDef';
 import Image from 'next/image';
-import placeholderLogo from '../../images/project-logo-placeholder.jpg'
+import { FC, Fragment, memo, useCallback, useState } from 'react';
+
+import { portfolioItems, SectionId } from '../../data/data';
+import { PortfolioItem } from '../../data/dataDef';
+import placeholderLogo from '../../images/project-logo-placeholder.jpg';
+import GithubIcon from '../Icon/GithubIcon';
+import Section from '../Layout/Section';
 
 const Portfolio: FC = memo(() => {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
-
+  const handleModalClose = useCallback(() => setSelectedItem(null), []);
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Portfolio}>
       <h2 className="text-center text-xl font-bold text-white mb-8">My Projects</h2>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {portfolioItems.map((item, index) => (
           <div
-            key={index}
             className="cursor-pointer overflow-hidden rounded-lg bg-neutral-700 shadow-lg hover:shadow-xl"
+            key={index}
             onClick={() => setSelectedItem(item)}>
             <Image
-              src={item.image ? item.image : placeholderLogo}
               alt={item.title}
               className="h-48 w-full object-cover"
+              src={item.image ? item.image : placeholderLogo}
             />
             <div className="p-4">
               <h3 className="text-lg font-bold text-white">{item.title}</h3>
@@ -34,8 +34,8 @@ const Portfolio: FC = memo(() => {
       </div>
 
       {selectedItem && (
-        <Transition.Root show={!!selectedItem} as={Fragment}>
-          <Dialog as="div" className="relative z-50" onClose={() => setSelectedItem(null)}>
+        <Transition.Root as={Fragment} show={!!selectedItem}>
+          <Dialog as="div" className="relative z-50" onClose={handleModalClose}>
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -62,10 +62,10 @@ const Portfolio: FC = memo(() => {
                       {selectedItem.title}
                       {selectedItem.url && (
                         <a
+                          className="text-natural-500 hover:text-orange-400"
                           href={selectedItem.url}
-                          target="_blank"
                           rel="noopener noreferrer"
-                          className="text-natural-500 hover:text-orange-400">
+                          target="_blank">
                           <GithubIcon aria-hidden="true" className="h-5 w-5 flex-shrink-0" />
                         </a>
                       )}
@@ -80,17 +80,17 @@ const Portfolio: FC = memo(() => {
                       {selectedItem.video && (
                         <div className="mt-4">
                           <iframe
+                            allowFullScreen
+                            className="w-full h-64"
                             src={selectedItem.video}
                             title="Video Demo"
-                            className="w-full h-64"
-                            allowFullScreen
                           />
                         </div>
                       )}
                     </div>
                     <button
-                      onClick={() => setSelectedItem(null)}
-                      className="absolute top-2 right-2 text-white hover:text-orange-500">
+                      className="absolute top-2 right-2 text-white hover:text-orange-500"
+                      onClick={() => setSelectedItem(null)}>
                       <span aria-hidden="true" className="text-xl font-bold">×</span>
                     </button>
                   </Dialog.Panel>
