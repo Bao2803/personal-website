@@ -8,6 +8,7 @@ import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/header-background.webp';
 import testimonialImage from '../images/testimonial.webp';
+import petinderLogoImage from '../images/petinder-logo.webp';
 import {
   About,
   ContactSection,
@@ -147,35 +148,40 @@ export const skills: SkillGroup[] = [
 export const portfolioItems: PortfolioItem[] = [
   {
     title: "Cloud Alloc",
-    description: [
-      "Developed a Spring Boot API to manage multiple Google Drive and Dropbox accounts",
-      "Used PostgreSQL as a DB, and Redis as a cache for the cache-aside pattern",
-      "Implementing CDC using Debezium and Kafka to sync data near real-time from PostgreSQL and Drive to ElasticSearch, enabling full-context search over both file metadata and file contents",
-      "Implemented lazy updating using MinIO as a cache for file updates, decreasing API calls to Drive and Dropbox",
+    shortDescription: "Sync smarter: A cloud manager that bridges Drive, Dropbox, and blazing-fast search.",
+    longDescription: [
+      "Developed a Spring Boot API to manage multiple Google Drive and Dropbox accounts.",
+      "Used PostgreSQL as a DB, and Redis as a cache for the cache-aside pattern.",
+      "Implemented CDC using Debezium and Kafka to sync data near real-time from PostgreSQL and Drive to ElasticSearch, enabling full-context search over both file metadata and file contents.",
+      "Implemented lazy updating using MinIO as a cache for file updates, decreasing API calls to Drive/Dropbox.",
     ],
-    url: "https://github.com/Bao2803/cloud_alloc"
+    url: "https://github.com/Bao2803/cloud_alloc",
   },
   {
     title: "Petinder",
-    description: [
-      "Developed a microservices backend API that is similar to Tinder but for pets, and deployed on Azure",
-      "Used RabbitMQ as a message broker for services communication, decoupling the backend services",
-      "Implemented OAuth2 login with Google/GitHub using Spring Security",
-      "Implemented full context search for pets using PostgreSQL's Full-Text Search",
+    shortDescription: "Swipe right, but for pets — matchmaking meets microservices.",
+    longDescription: [
+      "Developed a microservices backend API that is similar to Tinder but for pets, and deployed on Azure.",
+      "Used RabbitMQ as a message broker for services communication, decoupling the backend services.",
+      "Implemented OAuth2 login with Google/GitHub using Spring Security.",
+      "Implemented full context search for pets using PostgreSQL's Full-Text Search.",
     ],
+    image: petinderLogoImage,
     url: "https://github.com/namneyugn21/Petinder",
   },
   {
     title: "XinuOS",
-    description: [
+    shortDescription: "Redefining OS scheduling: from theory to 40% faster reality.",
+    longDescription: [
       "Enhanced XINU's scheduler by implementing a dynamic scheduling algorithm using multilevel feedback queues reducing complexity from O(n) to O(1)",
-      "Tracked per-process CPU usage and response times, boosting system responsiveness for 100+ processes by 20%",
+      "Tracked processes CPU usage and response times, boosting system responsiveness for processes by 20%",
       "Developed a framework to adjust process priorities dynamically, increasing throughput by up to 40% for CPU-bound and I/O-bound processes",
     ],
   },
   {
     title: "Personal Finanace",
-    description: [
+    shortDescription: "Track your money, serverlessly. Cloud-native finance dashboard built to scale.",
+    longDescription: [
       "Created a responsive dashboard UI to display transactions and statistics using ReactJS and Material UI",
       "Developed a highly scalable serverless backend using Java, AWS Lambda, and AWS RDS for PostgreSQL",
       "Utilized AWS API Gateway for load balancing and exposing the API",
@@ -184,7 +190,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     title: 'Shell Project',
-    description: [
+    shortDescription: "A shell with brains — command parsing, scripting, and Unix vibes in C++.",
+    longDescription: [
       "Developed a Unix-like shell interpreter in C++ with command parsing, execution, I/O redirection, piping, and background process handling",
       "Integrated features like environment variable expansion, quote handling, escaping, and built-in commands like printenv and setenv",
       "Implemented control flow constructs such as if statements, while loops, and for loops, enabling scripting capabilities within the shell",
@@ -192,16 +199,19 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     title: 'Multiplayer Shooter',
-    description: [
+    shortDescription: "AI bots, real-time battles, and zero-lag thrills in a custom Unreal FPS.",
+    longDescription: [
       "Created AI bots to track and shoot players using Unreal Engine's AI Behavioral tree and Blackboard, intensifying gameplay challenges",
       "Established real-time multiplayer mode via Unreal Engine online subsystem and Steam, ensuring smooth gaming across locations",
       "Implemented interpolation and extrapolation techniques to reduce network latency by 30% during gameplay, enhancing user experience",
     ],
-    url: 'https://youtu.be/8stFrYXEMpg',
+    url: "https://gitlab.com/Bao2803/simpleshooter",
+    video: 'https://www.youtube.com/embed/8stFrYXEMpg?si=zzEQJ1M3Vp15sib0',
   },
   {
     title: 'Photo Gallery',
-    description: [
+    shortDescription: "Like Google Photos, but homemade — secure, fast, and built in Go.",
+    longDescription: [
       "Led the development of a monolithic web app in Golang, implementing MVC architecture for a feature-rich platform akin to Google Photos",
       "Implemented secure user authentication system from scratch in Golang, utilizing salt and pepper encryption methods and protecting against CSRF attacks with gorilla/csrf",
       "Managed the creation of robust gallery management features, enabling users to effortlessly create, edit, and share galleries",
@@ -209,8 +219,9 @@ export const portfolioItems: PortfolioItem[] = [
     url: 'https://github.com/Bao2803/photo_gallery',
   },
   {
-    title: 'Campus Mobility Enhanced',
-    description: [
+    title: 'Campus Mobility',
+    shortDescription: "From traffic data to Arduino lights — real-time campus transport reimagined.",
+    longDescription: [
       "Conducted thorough data analysis on user preferences and usage patterns, leading to the identification of key areas of improvement for the Purdue Campus Mobility system",
       "Built and programmed a simulated traffic light using Arduino and C++, effectively controlling the prototype lever arm in real-time testing",
     ],
@@ -234,7 +245,7 @@ export const education: TimelineItem[] = [
           <strong>Extracurricular Activity: </strong>Engineering in the World of Data Learning Community, IEEE Computer Society
         </li>
         <li>
-          <strong>Relevant Courses: </strong>Object Oriented Programming, Data Structure and Algorithm, 
+          <strong>Relevant Courses: </strong>Object Oriented Programming, Data Structure and Algorithm,
           Computer Network, Operating System, Software Engineering, C Programming, Computer Graphics, System Programming
         </li>
       </ul>

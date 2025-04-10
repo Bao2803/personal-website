@@ -1,7 +1,7 @@
-import {StaticImageData} from 'next/image';
-import {FC, ForwardRefExoticComponent, SVGProps} from 'react';
+import { StaticImageData } from 'next/image';
+import { FC, ForwardRefExoticComponent, SVGProps } from 'react';
 
-import {IconProps} from '../components/Icon/Icon';
+import { IconProps } from '../components/Icon/Icon';
 
 export interface HomepageMeta {
   title: string;
@@ -72,8 +72,11 @@ export interface SkillGroup {
  */
 export interface PortfolioItem {
   title: string;
-  description: string[];
+  shortDescription: string;
+  longDescription: string[];
+  image?: string;
   url?: string;
+  video?: string;
 }
 
 /**
